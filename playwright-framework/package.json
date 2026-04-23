@@ -1,0 +1,25 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright E2E automation framework by Prasanna Singari",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:chrome": "npx playwright test --project=chrome",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:safari": "npx playwright test --project=safari",
+    "test:mobile": "npx playwright test --project=mobile-android",
+    "test:api": "npx playwright test tests/api/",
+    "test:e2e": "npx playwright test tests/e2e/",
+    "test:report": "npx playwright test && npm run report:open",
+    "report:open": "npx playwright show-report reports/html",
+    "lint": "npx eslint . --ext .ts",
+    "clean": "rm -rf reports test-results"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
